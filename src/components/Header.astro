@@ -3,47 +3,233 @@ import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 ---
 
-<header>
-	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
-			
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			
-		</div>
-	</nav>
-</header>
-<style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-		justify-content: center;
-		align-items: center;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
+<!-- Header Container -->
+<div class="header-container">
+  <!-- Name in Top Left -->
+  <div class="site-name">
+    <a href="https://irtaza.xyz">{SITE_TITLE}</a>
+  </div>
 
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
+  <!-- Dark Mode Toggle in Top Right -->
+  <div id="darkmode-toggle" class="darkmode-toggle" aria-label="Toggle dark mode">
+    <i class="far fa-sun light-icon"></i>
+    <i class="far fa-moon dark-icon"></i>
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav class="menu">
+    <ul>
+      <li><HeaderLink href="https://irtaza.xyz">Home</HeaderLink></li>
+      <li><HeaderLink href="/blog">Blog</HeaderLink></li>
+      <li><HeaderLink href="https://irtaza.xyz/#about-me">About</HeaderLink></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- Dark Mode Script -->
+<script>
+  // Set initial theme
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  
+  // Toggle theme
+  document.getElementById('darkmode-toggle')?.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+</script>
+
+<style>
+  /* Header Container */
+  .header-container {
+    position: relative;
+    width: 100%;
+    padding: 2rem 0 4rem 0;
+    text-align: center;
+  }
+
+  /* Site Name - Top Left */
+  .site-name {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 1000;
+  }
+
+  .site-name a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "0xProto", monospace;
+    transition: color 0.3s ease;
+  }
+
+  .site-name a:hover {
+    color: var(--link-color);
+  }
+
+  /* Dark Mode Toggle - Top Right */
+  .darkmode-toggle {
+    cursor: pointer;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1000;
+  }
+
+  .darkmode-toggle:hover {
+    color: var(--link-color);
+    transform: scale(1.1);
+  }
+
+  .darkmode-toggle .light-icon,
+  .darkmode-toggle .dark-icon {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    position: absolute;
+  }
+
+  [data-theme="light"] .light-icon {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  [data-theme="light"] .dark-icon {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  [data-theme="dark"] .light-icon {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  [data-theme="dark"] .dark-icon {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Navigation Menu */
+  .menu {
+    position: absolute;
+	right: 50%;
+	left: 50%;
+    top: 2rem;
+    z-index: 1000;
+  }
+
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .menu ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+  }
+
+  .menu ul li a {
+    color: var(--link-color);
+    text-decoration: underline;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    padding: 0.2rem 0.5rem;
+    position: relative;
+    border-radius: 0.5rem;
+    font-family: "0xProto", monospace;
+  }
+
+  .menu ul li a:hover {
+    color: var(--bg-color);
+    background-color: var(--link-color);
+    text-decoration: none;
+  }
+
+  .menu ul li a.active {
+    color: var(--bg-color);
+    background-color: var(--link-color);
+    text-decoration: none;
+  }
+
+  /* Responsive Design for Header */
+  @media (max-width: 768px) {
+    .header-container {
+      padding: 1rem 0 3rem 0;
+    }
+
+    .site-name {
+      top: 1rem;
+      left: 1rem;
+    }
+
+    .site-name a {
+      font-size: 1.25rem;
+    }
+
+    .darkmode-toggle {
+      top: 1rem;
+      right: 1rem;
+    }
+    
+    .darkmode-toggle .light-icon,
+    .darkmode-toggle .dark-icon {
+      font-size: 1.25rem;
+    }
+
+    .page-header h1 {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .menu {
+      margin-top: 1.5rem;
+    }
+    
+    .menu ul {
+      gap: 1rem;
+    }
+    
+    .menu ul li a {
+      font-size: 0.9rem;
+      padding: 0.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .menu ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .menu ul li a {
+      font-size: 0.8rem;
+      padding: 0.75rem 1rem;
+    }
+
+    .site-name a {
+      font-size: 1.1rem;
+    }
+  }
 </style>

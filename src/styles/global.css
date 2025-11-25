@@ -1,6 +1,5 @@
 /* 
   Customized for Irtaza's Blog with portfolio styling
-  Based on Bear Blog's CSS with portfolio theme integration
 */
 
 /* CSS Variables - Portfolio Theme */
@@ -270,95 +269,6 @@ hr {
   color: var(--text-color);
 }
 
-/* Dark Mode Toggle - Portfolio Style */
-.darkmode-toggle {
-  cursor: pointer;
-  color: var(--text-color);
-  transition: all 0.3s ease;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 2rem;
-  left: 2rem;
-  z-index: 1000;
-}
-
-.darkmode-toggle:hover {
-  color: var(--link-color);
-  transform: scale(1.1);
-}
-
-.darkmode-toggle .light-icon,
-.darkmode-toggle .dark-icon {
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
-  position: absolute;
-}
-
-[data-theme="light"] .light-icon {
-  opacity: 1;
-  transform: scale(1);
-}
-
-[data-theme="light"] .dark-icon {
-  opacity: 0;
-  transform: scale(0);
-}
-
-[data-theme="dark"] .light-icon {
-  opacity: 0;
-  transform: scale(0);
-}
-
-[data-theme="dark"] .dark-icon {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Navigation Menu - Portfolio Style */
-.menu {
-  position: fixed;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-}
-
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 2rem;
-}
-
-.menu ul li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  border: none;
-}
-
-.menu ul li a {
-  color: var(--link-color);
-  text-decoration: underline;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  padding: 0.5rem 1rem;
-  position: relative;
-  border-radius: 0.5rem;
-}
-
-.menu ul li a:hover {
-  color: var(--bg-color);
-  background-color: var(--link-color);
-  text-decoration: none;
-}
-
 /* Utility Classes */
 .sr-only {
   border: 0;
@@ -395,36 +305,10 @@ hr {
   .cards {
     grid-template-columns: 1fr;
   }
-  
-  .menu ul {
-    gap: 1rem;
-  }
-  
-  .menu ul li a {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-  }
-  
-  .darkmode-toggle {
-    top: 1rem;
-    left: 1rem;
-  }
-  
-  .darkmode-toggle .light-icon,
-  .darkmode-toggle .dark-icon {
-    font-size: 1.25rem;
-  }
 }
 
 @media (max-width: 480px) {
-  .menu ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  
-  .menu ul li a {
-    font-size: 0.8rem;
-    padding: 0.75rem 1rem;
+  main {
+    padding: 0.5rem;
   }
 }

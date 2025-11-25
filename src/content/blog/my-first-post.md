@@ -2,10 +2,7 @@
 title: "My First Blog Post"
 pubDate: 2024-01-15
 description: "This is the first post of my new Astro blog."
-author: "Irtaza"
-image:
-  url: "https://images.unsplash.com/photo-1555066931-4365d14bab8c"
-  alt: "The Astro logo on a dark background"
+heroImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c"
 tags: ["astro", "blogging", "learning"]
 ---
 
