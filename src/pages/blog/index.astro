@@ -162,10 +162,6 @@ const sortedPosts = posts.sort(
     transition: transform 0.3s ease;
   }
 
-  .blog-card:hover .post-image {
-    transform: scale(1.05);
-  }
-
   .card-content {
     padding: 1.25rem;
     display: flex;
@@ -181,13 +177,14 @@ const sortedPosts = posts.sort(
   }
 
   .post-title a {
-    color: var(--text-color);
+    color: var(--link-color);
     text-decoration: none;
     transition: color 0.3s ease;
   }
 
   .post-title a:hover {
-    color: var(--link-color);
+    color: var(--bg-color);
+	background-color: var(--link-color);
   }
 
   .post-excerpt {

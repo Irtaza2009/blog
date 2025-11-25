@@ -11,7 +11,7 @@ import HeaderLink from './HeaderLink.astro';
   </div>
 
   <!-- Dark Mode Toggle in Top Right -->
-  <div id="darkmode-toggle" class="darkmode-toggle" aria-label="Toggle dark mode">
+  <div id="darkmode-toggle-id" class="darkmode-toggle" aria-label="Toggle dark mode">
     <i class="far fa-sun light-icon"></i>
     <i class="far fa-moon dark-icon"></i>
   </div>
@@ -28,18 +28,24 @@ import HeaderLink from './HeaderLink.astro';
 
 <!-- Dark Mode Script -->
 <script>
-  // Set initial theme
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  document.documentElement.setAttribute('data-theme', savedTheme);
-  
-  // Toggle theme
-  document.getElementById('darkmode-toggle')?.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-  });
+	// Dark mode toggle setup
+	const darkModeToggle = document.getElementById('darkmode-toggle-id');
+
+	// Set initial mode
+	if (!localStorage.getItem('theme')) {
+		localStorage.setItem('theme', 'dark');
+	}
+
+	const currentTheme = localStorage.getItem('theme') || 'dark';
+	document.documentElement.setAttribute('data-theme', currentTheme);
+
+	// Toggle dark/light mode
+	darkModeToggle?.addEventListener('click', () => {
+		const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+		const newTheme = isDarkMode ? 'light' : 'dark';
+		document.documentElement.setAttribute('data-theme', newTheme);
+		localStorage.setItem('theme', newTheme);
+	});
 </script>
 
 <style>
@@ -74,53 +80,7 @@ import HeaderLink from './HeaderLink.astro';
     color: var(--link-color);
   }
 
-  /* Dark Mode Toggle - Top Right (aligned with blog cards) */
-  .darkmode-toggle {
-    cursor: pointer;
-    color: var(--text-color);
-    transition: all 0.3s ease;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 2rem;
-    right: calc(50% - 300px); /* Align with blog card end */
-    z-index: 2000;
-  }
-
-  .darkmode-toggle:hover {
-    color: var(--link-color);
-    transform: scale(1.1);
-  }
-
-  .darkmode-toggle .light-icon,
-  .darkmode-toggle .dark-icon {
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    position: absolute;
-  }
-
-  [data-theme="light"] .light-icon {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  [data-theme="light"] .dark-icon {
-    opacity: 0;
-    transform: scale(0);
-  }
-
-  [data-theme="dark"] .light-icon {
-    opacity: 0;
-    transform: scale(0);
-  }
-
-  [data-theme="dark"] .dark-icon {
-    opacity: 1;
-    transform: scale(1);
-  }
+  
 
   /* Navigation Menu */
   .menu {
