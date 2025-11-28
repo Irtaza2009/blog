@@ -2,7 +2,7 @@
 title: "My First Blog Post"
 pubDate: 2024-01-15
 description: "This is the first post of my new Astro blog."
-heroImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+heroImage: "../../assets/blog-placeholder-2.jpg"
 tags: ["astro", "blogging", "learning"]
 ---
 
