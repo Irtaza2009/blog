@@ -67,9 +67,33 @@ And I think that was it.
 
 Yeah, I did not add any sfx or music. I hadn't added any audio to any of my projects before. I think I realised after this game from the feedback I received that I should add audio/sfx/music to stuff.
 
-## Submitting and Voting
-Ok so all of the stuff I did in the last section happened in the span of the full week. So like now I had to submit my game. So I exported a WebGL build from Unity, troubleshot why it didn't work on my github pages site, found the solution, and got the game working on the web! Yayy! Then I improved the game's GitHub repository, and made the README just a teeny tiny bit better (so now it contained the game's title, description, controls, and URL, compared to just the game's title before).
+## Submitting
+Ok so all of the stuff I did in the last section happened in the span of the full week. So like now I had to submit my game. So I exported a WebGL build from Unity, troubleshot why it didn't work on my github pages site, found the solution, and got the game working on the web! Yayy!
+
+Then I improved the game's GitHub repository, and made the README just a teeny tiny bit better (so now it contained the game's title, description, controls, and URL, compared to just the game's title before).
 
 Oh and I also thought up of a cool name for the game!
 
 **Glitch Out**!
+
+And finally I filled out the submission form!
+
+## Voting
+And then voting opened up. It was in the format of 1v1 matchups, with random assignments. And all of the other games were pretty cool. As I got through the other games, I learned the ways in which I could have improved and polished my game more. Like audio. 
+
+And then came the 3 days wait before the results were going to be announced.
+
+## Results
+And then this happened!!!
+
+![](https://hc-cdn.hel1.your-objectstorage.com/s/v3/74ffd220701a432b259c172d83bb88454b3ec516_chrome_zmagqnxvgu.png)
+
+I got second place!! And thus was among the top 5 winners! And I was also going to get a prize (which since the jam was part of a bigger event, [Arcade](https://hackclub.com/arcade/), was a token multiplier, but for me, let's say it was the equivalent of a [Keychron K6 Pro](https://www.keychron.com/products/keychron-k6-pro-qmk-via-wireless-custom-mechanical-keyboard?srsltid=AfmBOoqEsnkUK6zIwAg2vZ9SM94yL2Tenn9VOsPkcPM3KqKbe_srd4zg))
+
+## Epilogue
+Overall, this jam was a great experience for me! And my first win in a game jam, which felt like an epic moment! I learnt a lot of things (like the importance of audio), and had a lot of fun! 
+
+The game I submitted for the jam is [open-source](https://github.com/Irtaza2009/Glitch-Out), and you can also try it out [here](https://irtaza.xyz/My-Games/Glitch-Out/WebGL/). (Warning: It's bad...)
+
+
+![](https://hc-cdn.hel1.your-objectstorage.com/s/v3/5e0db50c1f7cf54e4c06d25f9a0c992b46ab4df4_20251128_230330.jpg)
