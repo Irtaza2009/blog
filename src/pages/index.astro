@@ -1,12 +1,11 @@
 ---
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
-import BaseHead from '../../components/BaseHead.astro';
-import Footer from '../../components/Footer.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
-import Header from '../../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
-
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'; 
 // Get all blog posts and sort by date
 const posts = await getCollection('blog');
 const sortedPosts = posts.sort(
@@ -30,7 +29,7 @@ const sortedPosts = posts.sort(
       <div class="blog-list">
         {sortedPosts.map((post) => (
           <article class="blog-card">
-            <a href={`/blog/${post.id}/`} class="card-link" aria-label={`Read ${post.data.title}`}>
+            <a href={`/${post.id}/`} class="card-link" aria-label={`Read ${post.data.title}`}>
               <div class="card-layout">
                 {post.data.heroImage && (
                   <div class="image-container">
