@@ -9,4 +9,5 @@ export default defineConfig({
 	site: 'https://irtaza.xyz',
 	base: '/blog/',
 	integrations: [mdx(), sitemap()],
+	markdown: {},
 });
