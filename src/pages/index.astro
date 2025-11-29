@@ -29,7 +29,7 @@ const sortedPosts = posts.sort(
       <div class="blog-list">
         {sortedPosts.map((post) => (
           <article class="blog-card">
-            <a href={`/${post.id}/`} class="card-link" aria-label={`Read ${post.data.title}`}>
+            <a href={`/blog/${post.id}/`} class="card-link" aria-label={`Read ${post.data.title}`}>
               <div class="card-layout">
                 {post.data.heroImage && (
                   <div class="image-container">
