@@ -4,16 +4,19 @@ const today = new Date();
 
 <footer class="site-footer">
   <div class="footer-content">
-    <p class="copyright">&copy; {today.getFullYear()} <b>Irtaza</b>. All rights reserved.</p>
+    <p class="copyright">&copy; {today.getFullYear()} <b><a href="https://irtaza.xyz">Irtaza</a></b>. All rights reserved.</p>
     <div class="social-links">
       <a href="https://github.com/Irtaza2009" target="_blank" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://instagram.com/irtaza_2009" target="_blank" aria-label="Instagram">
+      <a href="https://www.linkedin.com/in/syed-muhammad-irtaza-naqvi-5b627422a/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/irtaza_2009/" target="_blank" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="https://medium.com/@irtazanaqvi05" target="_blank" aria-label="Medium">
-        <i class="fab fa-medium"></i>
+      <a href="mailto:irtazanaqvi05@gmail.com" target="_blank" aria-label="Email">
+        <i class="far fa-envelope"></i>
       </a>
     </div>
   </div>
@@ -24,7 +27,7 @@ const today = new Date();
     background: var(--card-bg-color);
     border-top: 1px solid var(--text-color);
     margin-top: 4rem;
-    padding: 2rem 1rem;
+    padding: 0.5rem;
   }
 
   .footer-content {
@@ -34,6 +37,16 @@ const today = new Date();
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+  }
+
+  .footer-content a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+  }
+
+  .footer-content a:hover {
+    text-decoration: underline;
   }
 
   .copyright {
