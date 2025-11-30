@@ -9,11 +9,12 @@ import Header from '../components/Header.astro';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, tags, heroImage } = Astro.props;
+const ogImageUrl = `${Astro.site}blog/${Astro.params.slug}/og.png`;
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} ogImageUrl={ogImageUrl} />
 		<style>
 			main {
 				width: calc(100% - 2em);
