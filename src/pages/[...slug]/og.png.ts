@@ -3,10 +3,18 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import satori from 'satori';
 import sharp from 'sharp';
-import OGImage from '../../components/og/image';
+import { createOGImage } from '../../components/og/image';
 
-// Load font
-const fontData = await fs.readFile("./src/assets/fonts/0xProtoNerdFont-Regular.ttf");
+// Load font using fs
+let fontData: Buffer;
+try {
+  fontData = await fs.readFile(`${process.cwd()}/public/fonts/Outfit-SemiBold.ttf`);
+  console.log('Font loaded successfully');
+} catch (error) {
+  console.error('Error loading font:', error);
+  const message = error instanceof Error ? error.message : String(error);
+  throw new Error(`Failed to load font: ${message}`);
+}
 
 export const GET: APIRoute = async ({ params }) => {
   const { slug } = params;
@@ -19,13 +27,15 @@ export const GET: APIRoute = async ({ params }) => {
   }
 
   try {
-    // Use the OGImage component directly
-    const svg = await satori(OGImage(post), {
+    console.log('Generating OG image for:', post.data.title);
+    
+    const element = createOGImage(post);
+    const svg = await satori(element, {
       width: 1200,
       height: 630,
       fonts: [
         {
-          name: '0xProto',
+          name: 'Outfit',
           data: fontData,
           weight: 400,
           style: 'normal',
@@ -45,7 +55,8 @@ export const GET: APIRoute = async ({ params }) => {
     });
   } catch (error) {
     console.error('Error generating OG image:', error);
-    return new Response('Failed to generate image', { status: 500 });
+    const message = error instanceof Error ? error.message : String(error);
+    return new Response(`Failed to generate image: ${message}`, { status: 500 });
   }
 };
 
