@@ -4,7 +4,11 @@ const today = new Date();
 
 <footer class="site-footer">
   <div class="footer-content">
-    <p class="copyright">&copy; {today.getFullYear()} <b><a href="https://irtaza.xyz">Irtaza</a></b>. All rights reserved.</p>
+    <p class="copyright">&copy; {today.getFullYear()}
+      <b>
+        <a href="https://irtaza.xyz">Irtaza</a>.
+      </b>
+    </p>
     <div class="social-links">
       <a href="https://github.com/Irtaza2009" target="_blank" aria-label="GitHub">
         <i class="fab fa-github"></i>
@@ -24,8 +28,7 @@ const today = new Date();
 
 <style>
   .site-footer {
-    background: var(--card-bg-color);
-    border-top: 1px solid var(--text-color);
+    border-top: 1px solid var(--card-bg-color);
     margin-top: 4rem;
     padding: 0.5rem;
   }
@@ -34,7 +37,7 @@ const today = new Date();
     max-width: 800px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 2rem;
   }
