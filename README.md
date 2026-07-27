@@ -10,11 +10,11 @@ A project for **Hack Club [Midnight](https://midnight.hackclub.com/?code=93)**!
 
 ## Preview
 
-![Main Page](https://hc-cdn.hel1.your-objectstorage.com/s/v3/e18e95349edc39bcf8318ec6f90fca14952a0c65_chrome_qdk1qvnpkb.png)
+![Main Page](https://user-cdn.hackclub-assets.com/019fa418-bd09-78a8-957c-76b83ee7703a/chrome_QDK1QVNpkb.png)
 
-![Blog Top](https://hc-cdn.hel1.your-objectstorage.com/s/v3/39b97eb61a5124ac49d90c6b16689ec3eeb88cb7_chrome_fpt5rt7hks.png)
+![Blog Top](https://user-cdn.hackclub-assets.com/019fa418-adac-75a7-894e-57fd25c2293a/chrome_fPT5Rt7hkS.png)
 
-![Blog](https://hc-cdn.hel1.your-objectstorage.com/s/v3/1778382b8c2545e7f070f5f3f97063af2b13fed8_chrome_oln0a6ilx2.png)
+![Blog](https://user-cdn.hackclub-assets.com/019fa418-9d51-70f4-8bb3-6bfc3a61b9a3/chrome_oLn0a6ilx2.png)
 
 ## Local development
 

@@ -13,7 +13,7 @@
   --card-hover-bg-color: #cad5db;
   --overlay-bg-color: rgba(255, 171, 171, 0.5);
   --scroll-indicator-bg-color: #dcb8b0;
-  
+
   /* Additional variables for blog */
   --accent: var(--link-color);
   --accent-dark: #7a6369;
@@ -22,9 +22,8 @@
   --gray-light: 222, 217, 227;
   --gray-dark: 40, 44, 52;
   --gray-gradient: rgba(var(--gray-light), 50%), #fff;
-  --box-shadow: 
-    0 2px 6px rgba(var(--gray), 25%), 
-    0 8px 24px rgba(var(--gray), 33%), 
+  --box-shadow:
+    0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
     0 16px 32px rgba(var(--gray), 33%);
 }
 
@@ -37,7 +36,7 @@
   --card-hover-bg-color: #22242b;
   --overlay-bg-color: rgba(0, 0, 0, 0.7);
   --scroll-indicator-bg-color: grey;
-  
+
   /* Update additional variables for dark mode */
   --black: 255, 255, 255;
   --gray: 229, 202, 183;
@@ -61,7 +60,13 @@
   box-sizing: border-box;
 }
 
-html, body {
+::selection {
+  background: var(--link-color);
+  color: var(--bg-color);
+}
+
+html,
+body {
   height: 100%;
 }
 
@@ -86,7 +91,12 @@ main {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 0 1rem 0;
   color: var(--text-color);
   line-height: 1.3;
@@ -104,7 +114,8 @@ h3 {
   font-size: 1.5rem;
 }
 
-strong, b {
+strong,
+b {
   font-weight: 700;
   color: var(--bold-color);
 }
@@ -112,7 +123,7 @@ strong, b {
 /* Links */
 a {
   color: var(--link-color);
- /* text-decoration: none; */
+  /* text-decoration: none; */
   transition: color 0.3s ease;
 }
 
@@ -192,15 +203,15 @@ hr {
   body {
     font-size: 16px;
   }
-  
+
   main {
     padding: 1rem;
   }
-  
+
   h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 1.75rem;
   }
