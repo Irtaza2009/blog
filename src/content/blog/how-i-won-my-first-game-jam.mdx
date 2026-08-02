@@ -6,6 +6,15 @@ heroImage: "../../assets/arcade-jam-poster.png"
 tags: ["gamedev", "unity", "gamejam"]
 ---
 
+import { Image } from 'astro:assets';
+import arcadeDiscovery from '../../assets/blog/how-i-won-my-first-game-jam/arcade-discovery.png';
+import arcadeDashboard from '../../assets/blog/how-i-won-my-first-game-jam/arcade-dashboard.png';
+import glitchOutTitleScreen from '../../assets/blog/how-i-won-my-first-game-jam/glitch-out-title-screen.png';
+import glitchOutGameplay from '../../assets/blog/how-i-won-my-first-game-jam/glitch-out-gameplay.png';
+import unityProbuilder from '../../assets/blog/how-i-won-my-first-game-jam/unity-probuilder.jpg';
+import jamResults from '../../assets/blog/how-i-won-my-first-game-jam/jam-results.png';
+import prizeKeyboard from '../../assets/blog/how-i-won-my-first-game-jam/prize-keyboard.jpg';
+
 I **won**. With a **_bad_ game**.
 
 Check out the **[source code](https://github.com/Irtaza2009/Glitch-Out)** for the game, or try it out **[here](https://irtaza.xyz/My-Games/Glitch-Out/WebGL/)**. (**Warning**: It's bad...)
@@ -28,13 +37,13 @@ _But that was about to **change**!_
 It's the July of 2024, and I discovered [Arcade](https://hackclub.com/arcade/) through the **GitHub Education Newsletter**, and decided to participate in it.
 
 <div style="display: flex; gap: 1rem; margin: 2rem 0;">
-  <img
-    src="https://cdn.hackclub.com/019fa410-82bf-777f-99dc-c91e4677bba8/chrome_M4ZAltbtp2.png"
+  <Image
+    src={arcadeDiscovery}
     alt="Arcade-1"
     style="width: 50%; height: auto;"
   />
-  <img
-    src="https://cdn.hackclub.com/019fa410-bca8-76ed-8002-414f095dbbd2/chrome_2YTZWdut4K.png"
+  <Image
+    src={arcadeDashboard}
     alt="Arcade-2"
     style="width: 50%; height: auto;"
   />
@@ -42,7 +51,7 @@ It's the July of 2024, and I discovered [Arcade](https://hackclub.com/arcade/) t
 
 Then at the start of August, the **Arcade Jam** was announced.
 
-![](https://cdn.hackclub.com/019fa411-c519-7f04-995f-fce5b4b8d902/chrome_eudJ1u6a1Q.png)
+<Image src={glitchOutTitleScreen} alt="Glitch Out title screen" />
 And I **decided** to take part.
 
 During the **next** 24 hours, everyone **submitted** an idea for the theme, and then voting **opened** up to decide the theme.
@@ -51,7 +60,7 @@ During the **next** 24 hours, everyone **submitted** an idea for the theme, and 
 
 Finally, after a wait of **3 days**, the theme was **announced**.
 
-![](https://cdn.hackclub.com/019fa412-73df-7848-81f7-9324bd5ad787/chrome_pvKFoiaCgQ.png)
+<Image src={glitchOutGameplay} alt="Glitch Out gameplay" />
 
 ### **Loopholes**!
 
@@ -81,7 +90,7 @@ Using **ProBuilder**, and skipping complex 3D modeling and embracing simple geom
 
 Oh and of course I also added a **pool**. A pool that you can **_walk_** on, because why not (definitely **not** because I didn't how to make proper water.).
 
-![](https://cdn.hackclub.com/019fa414-f5b6-706b-9704-964dd7f28972/chrome_Oh5H0m8rI1.jpg)
+<Image src={unityProbuilder} alt="Unity scene made with ProBuilder" />
 
 Then I **polished** all of the levels I had designed, and joined them all! This is where I had to get creative. So I added some **hallways**, **fake walls**, **some interactive boxes**, **more fake walls**, and there, I had my **simulation world**!
 
@@ -121,7 +130,7 @@ And then came the **3 days** wait before the **results** were going to be **anno
 
 _And then **this** happened!!!_
 
-![](https://cdn.hackclub.com/019fa415-6eaa-765d-b989-31f77ef7adf8/chrome_ZMaGqnXvgu.png)
+<Image src={jamResults} alt="Arcade Jam results" />
 
 I **couldn't** believe it at first... Like my game was ok **theme-wise**, but other than that, it was _terrible_.
 
@@ -135,4 +144,4 @@ Overall, this **game jam** was a great experience for me! And my **first** win i
 
 Oh and btw, the game I submitted for the jam is **_[open-source](https://github.com/Irtaza2009/Glitch-Out)_**, and you can also try it out **[here](https://irtaza.xyz/My-Games/Glitch-Out/WebGL/)**. (**Warning**: It's bad...)
 
-![](https://cdn.hackclub.com/019fa416-cfcd-7095-9f3e-57208056f175/20251128_230330.jpg)
+<Image src={prizeKeyboard} alt="Keychron keyboard prize equivalent" />
