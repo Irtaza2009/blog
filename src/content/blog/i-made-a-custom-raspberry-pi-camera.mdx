@@ -6,6 +6,60 @@ heroImage: "../../assets/camera-pishot-half-built.png"
 tags: ["hardware", "raspberry pi", "camera"]
 ---
 
+import wiringDiagram from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/wiring-diagram.png";
+import caseBase from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/case-base.png";
+import caseGrip from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/case-grip.png";
+import caseInteriorFront from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/case-interior-front.png";
+import caseInteriorBack from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/case-interior-back.png";
+import caseInteriorBottom from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/case-interior-bottom.png";
+import caseInteriorTop from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/case-interior-top.png";
+import buttonSlot from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/button-slot.png";
+import buttonSide from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/button-side.png";
+import buttonDetail from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/button-detail.png";
+import usbCPort from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/usb-c-port.png";
+import tp4056Supports from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/tp4056-supports.png";
+import viewfinderFront from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/viewfinder-front.png";
+import viewfinderSide from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/viewfinder-side.png";
+import tripodMount from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/tripod-mount.png";
+import powerSwitch from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/power-switch.png";
+import batterySpace from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/battery-space.png";
+import resizedCase from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/resized-case.png";
+import repositionedFront from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/repositioned-front.png";
+import repositionedBack from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/repositioned-back.png";
+import frontPersonalization from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/front-personalization.png";
+import finalDesignFront from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/final-design-front.png";
+import finalDesignBack from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/final-design-back.png";
+import prototypeTerminal from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/prototype-terminal.png";
+import caseKeychainHoles from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/case-keychain-holes.png";
+import caseTextPlaneDetail from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/case-text-plane-detail.png";
+import caseTextPlaneDetail2 from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/case-text-plane-detail-2.png";
+import breadboardPrototype from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/breadboard-prototype.jpg";
+import prototypeTestPhoto from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/prototype-test-photo.jpg";
+import prototypeTestPhoto2 from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/prototype-test-photo-2.png";
+import nonWorkingTp4056 from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/non-working-tp4056.png";
+import newTp4056Wired from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/new-tp4056-wired.png";
+import workingTp4056 from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/working-tp4056.png";
+import rewiredLongerJumpers from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/rewired-longer-jumpers.png";
+import multimeterBelow4v from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/multimeter-below-4v.png";
+import boostConverter51v from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/boost-converter-5-1v.png";
+import firstPrintedCaseParts from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/first-printed-case-parts.png";
+import firstPrintedCaseParts2 from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/first-printed-case-parts-2.png";
+import increasedCaseDepth from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/increased-case-depth.png";
+import revisedSlidingMechanism from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/revised-sliding-mechanism.png";
+import largerKeychainHoles from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/larger-keychain-holes.png";
+import electricalTapeReinforcement from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/electrical-tape-reinforcement.png";
+import placingComponents from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/placing-components.png";
+import componentsFitted from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/components-fitted.png";
+import shutterButtonFitted from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/shutter-button-fitted.png";
+import assembledCaseView from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/assembled-case-view.png";
+import flashingSdCard from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/flashing-sd-card.png";
+import raspberryPiImager from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/raspberry-pi-imager.png";
+import workingScriptTerminal from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/working-script-terminal.png";
+import extraShutterButton from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/extra-shutter-button.png";
+import completedPishotCamera from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/completed-pishot-camera.png";
+import pishotPhoto1 from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/pishot-photo-1.png";
+import pishotPhoto2 from "../../assets/blog/i-made-a-custom-raspberry-pi-camera/pishot-photo-2.png";
+
 This is my complete journey of making a custom Raspberry Pi camera: **PiShot**.
 
 I made it with a Raspberry Pi Zero 2 W, a Pi camera module, and a custom 3D-printed case.
@@ -36,7 +90,7 @@ I decided that I won't be using a PCB, so it's easier to place all the component
   width="3000"
   height="2013"
   alt="circuit_image (1)"
-  src="https://github.com/user-attachments/assets/8c0cb2bf-a454-4c5b-81e3-681301218cdd"
+  src={wiringDiagram.src}
 />
 
 **Total time spent: 3.5 hours**
@@ -50,14 +104,14 @@ I began by finding and downloading 3D models of all the components I would be us
     width="285"
     height="427"
     alt="image"
-    src="https://github.com/user-attachments/assets/cd110c81-74df-4898-acd5-777e4fd10602"
+    src={caseBase.src}
     style="width: 100%; height: auto;"
   />
   <img
     width="606"
     height="427"
     alt="image"
-    src="https://github.com/user-attachments/assets/4ad3debe-dd22-40c2-8b97-52c015f95244"
+    src={caseGrip.src}
     style="width: 100%; height: auto;"
   />
 </div>
@@ -69,28 +123,28 @@ I began by placing each component into the interior of the case, ensuring that t
     width="520"
     height="385"
     alt="image"
-    src="https://github.com/user-attachments/assets/99a0b39e-65e3-422b-8b96-b6b040019c25"
+    src={caseInteriorFront.src}
     style="width: 100%; height: auto;"
   />
   <img
     width="474"
     height="385"
     alt="image"
-    src="https://github.com/user-attachments/assets/f7afa6d4-ed17-4548-8d65-b04642f0acfe"
+    src={caseInteriorBack.src}
     style="width: 100%; height: auto;"
   />
   <img
     width="520"
     height="425"
     alt="image"
-    src="https://github.com/user-attachments/assets/ed7024ea-5300-4f40-8aba-95963028e34a"
+    src={caseInteriorBottom.src}
     style="width: 100%; height: auto;"
   />
   <img
     width="478"
     height="425"
     alt="image"
-    src="https://github.com/user-attachments/assets/fc9df2a5-7879-43af-b704-9b1fc7ae334f"
+    src={caseInteriorTop.src}
     style="width: 100%; height: auto;"
   />
 </div>
@@ -106,21 +160,21 @@ Looked through the datasheet for [these](https://tech.alpsalpine.com/e/products/
     width="464"
     height="454"
     alt="image"
-    src="https://github.com/user-attachments/assets/ae0a2edd-2afa-437c-99ed-293c89fa130a"
+    src={buttonSlot.src}
     style="width: 100%; height: auto;"
   />
   <img
     width="470"
     height="364"
     alt="image"
-    src="https://github.com/user-attachments/assets/0ec3f5a8-b3d0-4699-aec6-0cfc5d02fd34"
+    src={buttonSide.src}
     style="width: 100%; height: auto;"
   />
   <img
     width="478"
     height="293"
     alt="image"
-    src="https://github.com/user-attachments/assets/88141bc2-0f38-4adf-bcb5-248ea1174a5c"
+    src={buttonDetail.src}
     style="width: 100%; height: auto;"
   />
 </div>
@@ -132,14 +186,14 @@ Then, I also made a slot for the USB-C port, and some supports for the TP4056!
     width="513"
     height="300"
     alt="image"
-    src="https://github.com/user-attachments/assets/b95e5e53-d03f-4943-bd9b-898d2694520d"
+    src={usbCPort.src}
     style="width: 100%; height: auto;"
   />
   <img
     width="564"
     height="399"
     alt="image"
-    src="https://github.com/user-attachments/assets/7cf7fe17-e186-4c2e-bb00-3eb7cf105a50"
+    src={tp4056Supports.src}
     style="width: 100%; height: auto;"
   />
 </div>
@@ -155,35 +209,25 @@ Inspired by the removable Sony viewfinder, I also decided to make one too! It wi
     width="264"
     height="202"
     alt="image"
-    src="https://github.com/user-attachments/assets/bdaa236d-85d6-43ef-928d-cbd158be57eb"
+    src={viewfinderFront.src}
     style="width: 100%; height: auto;"
   />
   <img
     width="304"
     height="248"
     alt="image"
-    src="https://github.com/user-attachments/assets/503a9167-95cc-40ec-9e1c-2ef69dca1110"
+    src={viewfinderSide.src}
     style="width: 100%; height: auto;"
   />
 </div>
 
 Then I thought about adding support for standard tripods! And, of course, I think the sliding mechanism is super cool, so I built another bit of it on the bottom of the case, and then made a cube with a screw hole in it! Thankfully, I discovered Shapr3D's subtract tool, or I don't think I could have ever made the screw curve paths!! And finally rounded off the edges to make it look more polished!
 
-<img
-  width="306"
-  height="255"
-  alt="image"
-  src="https://github.com/user-attachments/assets/05ae695a-6135-43d5-aa06-1e5e8aa951f6"
-/>
+<img width="306" height="255" alt="image" src={tripodMount.src} />
 
 Then I remembered I had forgotten to add space for the SPDT On/Off switch, so I added that!
 
-<img
-  width="145"
-  height="97"
-  alt="image"
-  src="https://github.com/user-attachments/assets/4d4c5abe-a00a-485f-bb30-608b4c7e27c6"
-/>
+<img width="145" height="97" alt="image" src={powerSwitch.src} />
 
 **Total time spent: 3 hours**
 
@@ -196,40 +240,35 @@ The only thing left now was some final polishing- wait, I forgot to make space f
     width="430"
     height="379"
     alt="image"
-    src="https://github.com/user-attachments/assets/48c26c1a-e7cd-49ee-bbdf-468fa7159d4c"
+    src={batterySpace.src}
     style="width: 100%; height: auto;"
   />
   <img
     width="382"
     height="379"
     alt="image"
-    src="https://github.com/user-attachments/assets/0203dd44-053e-4d89-bec9-d0dd035a015f"
+    src={resizedCase.src}
     style="width: 100%; height: auto;"
   />
   <img
     width="468"
     height="442"
     alt="image"
-    src="https://github.com/user-attachments/assets/7d050b3b-c135-4082-9f34-17d2d82d5d1b"
+    src={repositionedFront.src}
     style="width: 100%; height: auto;"
   />
   <img
     width="514"
     height="442"
     alt="image"
-    src="https://github.com/user-attachments/assets/d11e9813-90ac-4d53-b4ab-347e53442fbc"
+    src={repositionedBack.src}
     style="width: 100%; height: auto;"
   />
 </div>
 
 And then I also added some text to the front of the camera, for _personalisation_!
 
-<img
-  width="398"
-  height="277"
-  alt="image"
-  src="https://github.com/user-attachments/assets/961ffaab-5933-4ffc-a89a-37eb2c37df23"
-/>
+<img width="398" height="277" alt="image" src={frontPersonalization.src} />
 
 Final 3D design!!
 
@@ -238,14 +277,14 @@ Final 3D design!!
     width="474"
     height="407"
     alt="image"
-    src="https://github.com/user-attachments/assets/352f30d1-cc85-4969-8895-ab5d76c42ac4"
+    src={finalDesignFront.src}
     style="width: 100%; height: auto;"
   />
   <img
     width="420"
     height="407"
     alt="image"
-    src="https://github.com/user-attachments/assets/0605512e-7c4c-4b2d-bf0e-a7fdc5f751d8"
+    src={finalDesignBack.src}
     style="width: 100%; height: auto;"
   />
 </div>
@@ -274,7 +313,7 @@ First, I flashed an SD card with Pi OS, with SSH enabled, and put that into the 
   width="1978"
   height="1088"
   alt="WindowsTerminal_ovPsQCGSl1"
-  src="https://github.com/user-attachments/assets/afde9b71-8a98-4fbd-b676-77d7b995066a"
+  src={prototypeTerminal.src}
 />
 
 After that, I looked up the pin layout for the Pi Zero 2 W, attached my shutter and pushbuttons, and my OLED. The buttons worked fine, but it took a lot of time to make the LED work! And after a lot of going back and forth, debugging the LED, I found out that it was not a 128x64 SSD1306, but a 132x64 SH1106. So I downloaded its libraries, updated my code, and it started working!
@@ -297,7 +336,7 @@ Worked on the case again! Improved the sliding mechanism, and took tolerance int
 
 <img
   alt="Keychain holes on the case"
-  src="https://cdn.hackclub.com/019c3905-e2a1-72a2-bba4-b4c328a5a2ec/chrome_VqDOkoIx2F.png"
+  src={caseKeychainHoles.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -307,12 +346,12 @@ intrusions this time!
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
   <img
     alt="Case text plane detail"
-    src="https://cdn.hackclub.com/019c3906-d17a-7125-ab6e-4e60b99c93a1/chrome_YQNMiX8gbg.png"
+    src={caseTextPlaneDetail.src}
     style="width: 100%; height: auto;"
   />
   <img
     alt="Case text plane detail 2"
-    src="https://cdn.hackclub.com/019c3907-3c83-7ca6-b25e-9157b9a04f0d/chrome_p4sAqf8u70.png"
+    src={caseTextPlaneDetail2.src}
     style="width: 100%; height: auto;"
   />
 </div>
@@ -325,7 +364,7 @@ Got out all the components I would need and made a basic breadboard prototype! R
 
 <img
   alt="Breadboard prototype"
-  src="https://cdn.hackclub.com/019c4291-c526-70d1-a139-deaf8dc09c0c/chrome_OqJD3AARIU.jpg"
+  src={breadboardPrototype.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -336,12 +375,12 @@ took with the camera:
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
   <img
     alt="Test photo from the prototype"
-    src="https://cdn.hackclub.com/019c4293-fe5e-7c4c-9e99-911260cd9450/chrome_Wsy7tjuofv.jpg"
+    src={prototypeTestPhoto.src}
     style="width: 100%; height: auto;"
   />
   <img
     alt="Test photo from the prototype 2"
-    src="https://cdn.hackclub.com/019c4294-2abf-7d46-b613-bf3fd87372e5/chrome_BW5Ro2uAoZ.png"
+    src={prototypeTestPhoto2.src}
     style="width: 100%; height: auto;"
   />
 </div>
@@ -356,7 +395,7 @@ Soldered the LiPo to the TP4056, and that to the boost converter (MT3608), but i
 
 <img
   alt="Non-working TP4056 setup"
-  src="https://cdn.hackclub.com/019c439f-4aba-75cd-afaa-8d8074ce4e54/image.png"
+  src={nonWorkingTp4056.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -371,7 +410,7 @@ Finally got the new TP4056 and MT3608 modules delivered today! Removed all the s
 
 <img
   alt="New TP4056 wired up"
-  src="https://cdn.hackclub.com/019c52c2-f469-7adb-8a4f-eb20fef3aea0/image.png"
+  src={newTp4056Wired.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -379,7 +418,7 @@ And it worked!
 
 <img
   alt="Working TP4056"
-  src="https://cdn.hackclub.com/019c52c4-01a7-7b76-b270-d5acda35f5f9/image.png"
+  src={workingTp4056.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -389,7 +428,7 @@ some longer wires (cut up from some jumper wires I had).
 
 <img
   alt="Rewired with longer jumper wires"
-  src="https://cdn.hackclub.com/019c52c6-4542-73ff-81b3-f08b273edaaf/image.png"
+  src={rewiredLongerJumpers.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -399,7 +438,7 @@ no matter how much I rotated the potentiometer.
 
 <img
   alt="Multimeter reading below 4V"
-  src="https://cdn.hackclub.com/019c52c8-4146-7ad3-9b88-9f839501d4e5/image.png"
+  src={multimeterBelow4v.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -409,7 +448,7 @@ and successfully set it to 5.1V!!
 
 <img
   alt="Boost converter set to 5.1V"
-  src="https://cdn.hackclub.com/019c52ca-0fe1-7d8a-85fa-59ed6c9d2bce/image.png"
+  src={boostConverter51v.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -427,12 +466,12 @@ Printed the 3D models I had made!
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
   <img
     alt="First printed case parts"
-    src="https://cdn.hackclub.com/019c65da-b221-734a-bbeb-4557f7517b60/image.png"
+    src={firstPrintedCaseParts.src}
     style="width: 100%; height: auto;"
   />
   <img
     alt="First printed case parts 2"
-    src="https://cdn.hackclub.com/019c65db-1611-75fa-9369-7e998e8f9577/image.png"
+    src={firstPrintedCaseParts2.src}
     style="width: 100%; height: auto;"
   />
 </div>
@@ -448,7 +487,7 @@ space for wires and stuff.
 
 <img
   alt="Increased case depth"
-  src="https://cdn.hackclub.com/019c65df-3db6-78ae-a9d6-6d48a1e321ff/image.png"
+  src={increasedCaseDepth.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -457,7 +496,7 @@ sanding, since I was printing another revision anyway.
 
 <img
   alt="Revised sliding mechanism"
-  src="https://cdn.hackclub.com/019c65de-ef7b-7e2a-a76e-f13c6c686882/image.png"
+  src={revisedSlidingMechanism.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -465,7 +504,7 @@ I also increased the size of the keychain holes, because they were too small.
 
 <img
   alt="Larger keychain holes"
-  src="https://cdn.hackclub.com/019c65df-fdc7-7861-a511-4dbdd5c57f8f/image.png"
+  src={largerKeychainHoles.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -481,7 +520,7 @@ Printed the new case!! Also, the bits I had soldered seemed to be coming off, so
 
 <img
   alt="Soldered joints reinforced with electrical tape"
-  src="https://cdn.hackclub.com/019c7ac6-7de7-772d-84c8-8f58bf302865/image.png"
+  src={electricalTapeReinforcement.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -490,7 +529,7 @@ stuff down.)
 
 <img
   alt="Placing components in the new case"
-  src="https://cdn.hackclub.com/019c7ac9-f9c2-78b8-9516-3ee1e489e109/image.png"
+  src={placingComponents.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -499,17 +538,17 @@ And everything fit perfectly! The shutter button even screwed into place.
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
   <img
     alt="Components fitted in the case"
-    src="https://cdn.hackclub.com/019c7ac7-00d1-744c-8185-142260e1a311/image.png"
+    src={componentsFitted.src}
     style="width: 100%; height: auto;"
   />
   <img
     alt="Shutter button screwed in place"
-    src="https://cdn.hackclub.com/019c7ac8-f144-7b9f-9517-057236d4176c/image.png"
+    src={shutterButtonFitted.src}
     style="width: 100%; height: auto;"
   />
   <img
     alt="Assembled case view"
-    src="https://cdn.hackclub.com/019c7ac7-86b7-7862-a83f-becd35e7155a/image.png"
+    src={assembledCaseView.src}
     style="width: 100%; height: auto;"
   />
 </div>
@@ -519,7 +558,7 @@ previous card, and then I'll test out the camera!!
 
 <img
   alt="Flashing a new SD card"
-  src="https://cdn.hackclub.com/019c7a9f-da6f-7e34-aefe-d571e5c39a9f/image.png"
+  src={flashingSdCard.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -531,7 +570,7 @@ Flashed the SD card with Pi OS!
 
 <img
   alt="Raspberry Pi Imager flashing the SD card"
-  src="https://cdn.hackclub.com/019c7c40-4b12-7f65-9b26-7e40f346a59a/rpi-imager_jX1MWojzgr.png"
+  src={raspberryPiImager.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -540,7 +579,7 @@ different libraries, the script worked!
 
 <img
   alt="Terminal showing the working script"
-  src="https://cdn.hackclub.com/019c7c40-d9bf-7d98-8838-bcd222d46ae8/WindowsTerminal_EVVYuoDKhw.png"
+  src={workingScriptTerminal.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -548,7 +587,7 @@ However, the shutter button was a bit buggy, so I also wired a small button too!
 
 <img
   alt="Extra wired shutter button"
-  src="https://cdn.hackclub.com/019c7c42-660c-7573-ba72-dc2acf56ade8/image.png"
+  src={extraShutterButton.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -556,7 +595,7 @@ And now I have my completed camera!!
 
 <img
   alt="Completed PiShot camera"
-  src="https://cdn.hackclub.com/019c7c43-5105-71d3-81d5-573c0b02569e/image.png"
+  src={completedPishotCamera.src}
   style="width: 100%; max-width: 500px; height: auto;"
 />
 
@@ -565,12 +604,12 @@ And it works!!! Here are some of the pictures I captured using it!!
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
   <img
     alt="Photo taken with PiShot"
-    src="https://cdn.hackclub.com/019c7c47-7ddb-7785-b2df-868e6b4ee93c/image.png"
+    src={pishotPhoto1.src}
     style="width: 100%; height: auto;"
   />
   <img
     alt="Photo taken with PiShot 2"
-    src="https://cdn.hackclub.com/019c7c48-3fb5-79f9-b5d1-0ae2e6f356a7/image.png"
+    src={pishotPhoto2.src}
     style="width: 100%; height: auto;"
   />
 </div>
