@@ -87,8 +87,8 @@ For the display, I will be using the ST7789 TFT-LCD. And a metal momentary push 
 I decided that I won't be using a PCB, so it's easier to place all the components in the case. So I will make a wiring diagram instead! Thus, I opened up [Cirkit Designer](https://app.cirkitdesigner.com/), and got to work!! [This](https://app.cirkitdesigner.com/project/cb34b867-8320-4c2c-972f-24cbd0726ab1) is what I came up with!
 
 <img
-  width="3000"
-  height="2013"
+  width="1200"
+  height="800"
   alt="circuit_image (1)"
   src={wiringDiagram.src}
 />
@@ -99,54 +99,58 @@ I decided that I won't be using a PCB, so it's easier to place all the component
 
 I began by finding and downloading 3D models of all the components I would be using. This process took a significant amount of time, as I had to search extensively to locate every part! After that, I started designing the case in Shapr3D on my iPad. I first created a rectangular base for the body, including a removable back. Next, I added a square hole in the centre for the camera module, and a hole at the top for the shutter button. The challenging part was designing a grip that could slide into the case and be removed easily. Developing the sliding mechanism took quite a while, but I think it turned out pretty cool!
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
+<div style="display: flex; gap: 1rem; margin: 2rem 0; align-items: stretch; justify-content: left; flex-wrap: wrap;">
   <img
-    width="285"
-    height="427"
+    width="284"
+    height="428"
     alt="image"
     src={caseBase.src}
-    style="width: 100%; height: auto;"
+    style="height: 320px; width: auto; max-width: 100%; border-radius: 4px;"
   />
   <img
     width="606"
-    height="427"
+    height="428"
     alt="image"
     src={caseGrip.src}
-    style="width: 100%; height: auto;"
+    style="height: 320px; width: auto; max-width: 100%; border-radius: 4px;"
   />
 </div>
 
 I began by placing each component into the interior of the case, ensuring that they were properly secured. I created holes on the sides and bottom for the SD card and the USB port of the Raspberry Pi. I also made an opening in the back cover for the LCD screen and added supports for all the components. However, I did not create a hole for the USB-C port, as I was still unsure about where to place it.
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
-  <img
-    width="520"
-    height="385"
-    alt="image"
-    src={caseInteriorFront.src}
-    style="width: 100%; height: auto;"
-  />
-  <img
-    width="474"
-    height="385"
-    alt="image"
-    src={caseInteriorBack.src}
-    style="width: 100%; height: auto;"
-  />
-  <img
-    width="520"
-    height="425"
-    alt="image"
-    src={caseInteriorBottom.src}
-    style="width: 100%; height: auto;"
-  />
-  <img
-    width="478"
-    height="425"
-    alt="image"
-    src={caseInteriorTop.src}
-    style="width: 100%; height: auto;"
-  />
+<div style="display: flex; flex-direction: column; gap: 1rem; margin: 2rem 0;">
+  <div style="display: flex; gap: 1rem; align-items: stretch; justify-content: left; flex-wrap: wrap;">
+    <img
+      width="520"
+      height="385"
+      alt="image"
+      src={caseInteriorFront.src}
+      style="height: 256px; width: auto; max-width: 100%; border-radius: 4px;"
+    />
+    <img
+      width="474"
+      height="385"
+      alt="image"
+      src={caseInteriorBack.src}
+      style="height: 256px; width: auto; max-width: 100%; border-radius: 4px;"
+    />
+  </div>
+  <div style="display: flex; gap: 1rem; align-items: stretch; justify-content: left; flex-wrap: wrap;">
+    <img
+      width="520"
+      height="425"
+      alt="image"
+      src={caseInteriorBottom.src}
+      style="height: 280px; width: auto; max-width: 100%; border-radius: 4px;"
+    />
+    <img
+      width="478"
+      height="425"
+      alt="image"
+      src={caseInteriorTop.src}
+      style="height: 280px; width: auto; max-width: 100%; border-radius: 4px;"
+    />
+  </div>
 </div>
 
 **Total time spent: 7 hours**
@@ -155,46 +159,46 @@ I began by placing each component into the interior of the case, ensuring that t
 
 Looked through the datasheet for [these](https://tech.alpsalpine.com/e/products/detail/SKRGAED010/) circle micro pushbuttons and noted their size, then made a cool to-size slot for them in the case!
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
+<div style="display: flex; gap: 1rem; margin: 2rem 0; align-items: stretch; justify-content: left; flex-wrap: wrap;">
   <img
     width="464"
     height="454"
     alt="image"
     src={buttonSlot.src}
-    style="width: 100%; height: auto;"
+    style="height: 165px; width: auto; max-width: 100%; border-radius: 4px;"
   />
   <img
     width="470"
     height="364"
     alt="image"
     src={buttonSide.src}
-    style="width: 100%; height: auto;"
+    style="height: 165px; width: auto; max-width: 100%; border-radius: 4px;"
   />
   <img
     width="478"
     height="293"
     alt="image"
     src={buttonDetail.src}
-    style="width: 100%; height: auto;"
+    style="height: 165px; width: auto; max-width: 100%; border-radius: 4px;"
   />
 </div>
 
 Then, I also made a slot for the USB-C port, and some supports for the TP4056!
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
+<div style="display: flex; gap: 1rem; margin: 2rem 0; align-items: stretch; justify-content: left; flex-wrap: wrap;">
   <img
     width="513"
     height="300"
     alt="image"
     src={usbCPort.src}
-    style="width: 100%; height: auto;"
+    style="height: 210px; width: auto; max-width: 100%; border-radius: 4px;"
   />
   <img
     width="564"
     height="399"
     alt="image"
     src={tp4056Supports.src}
-    style="width: 100%; height: auto;"
+    style="height: 210px; width: auto; max-width: 100%; border-radius: 4px;"
   />
 </div>
 
@@ -204,20 +208,20 @@ Then, I also made a slot for the USB-C port, and some supports for the TP4056!
 
 Inspired by the removable Sony viewfinder, I also decided to make one too! It will also have a sliding mechanism like the grip! I started by making an extrusion and adding the sliding mechanism, then I made a separate rectangle body, with a rectangle hole in the middle (this will be the viewfinder). I then fillet/chamfered it to look more trapezium-ish, like a real viewfinder. And finally, I also added some nice rounded supports to rest the eye on! These were the final results!!
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
+<div style="display: flex; gap: 1rem; margin: 2rem 0; align-items: stretch; justify-content: left; flex-wrap: wrap;">
   <img
     width="264"
     height="202"
     alt="image"
     src={viewfinderFront.src}
-    style="width: 100%; height: auto;"
+    style="height: 260px; width: auto; max-width: 100%; border-radius: 4px;"
   />
   <img
     width="304"
     height="248"
     alt="image"
     src={viewfinderSide.src}
-    style="width: 100%; height: auto;"
+    style="height: 260px; width: auto; max-width: 100%; border-radius: 4px;"
   />
 </div>
 
@@ -235,35 +239,39 @@ Then I remembered I had forgotten to add space for the SPDT On/Off switch, so I 
 
 The only thing left now was some final polishing- wait, I forgot to make space for a rechargeable battery!! So I imported a model of an 18650 cell, and tried to make space for it! But I couldn't :(. So finally I split my case (front, back, grip, everything) into two parts, increased its height by 5mm, and then joined it once again! So now my case was 5mm taller, and I could fit the battery inside too! And then I had to move around all the slots like front buttons, screen, camera hole, etc, around to centre them again and make them look nice!
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
-  <img
-    width="430"
-    height="379"
-    alt="image"
-    src={batterySpace.src}
-    style="width: 100%; height: auto;"
-  />
-  <img
-    width="382"
-    height="379"
-    alt="image"
-    src={resizedCase.src}
-    style="width: 100%; height: auto;"
-  />
-  <img
-    width="468"
-    height="442"
-    alt="image"
-    src={repositionedFront.src}
-    style="width: 100%; height: auto;"
-  />
-  <img
-    width="514"
-    height="442"
-    alt="image"
-    src={repositionedBack.src}
-    style="width: 100%; height: auto;"
-  />
+<div style="display: flex; flex-direction: column; gap: 1rem; margin: 2rem 0;">
+  <div style="display: flex; gap: 1rem; align-items: stretch; justify-content: left; flex-wrap: wrap;">
+    <img
+      width="430"
+      height="379"
+      alt="image"
+      src={batterySpace.src}
+      style="height: 310px; width: auto; max-width: 100%; border-radius: 4px;"
+    />
+    <img
+      width="382"
+      height="379"
+      alt="image"
+      src={resizedCase.src}
+      style="height: 310px; width: auto; max-width: 100%; border-radius: 4px;"
+    />
+  </div>
+  <div style="display: flex; gap: 1rem; align-items: stretch; justify-content: flex-start; flex-wrap: wrap;">
+    <img
+      width="468"
+      height="442"
+      alt="image"
+      src={repositionedFront.src}
+      style="height: 313px; width: auto; max-width: 100%; border-radius: 4px;"
+    />
+    <img
+      width="514"
+      height="442"
+      alt="image"
+      src={repositionedBack.src}
+      style="height: 313px; width: auto; max-width: 100%; border-radius: 4px;"
+    />
+  </div>
 </div>
 
 And then I also added some text to the front of the camera, for _personalisation_!
@@ -272,20 +280,20 @@ And then I also added some text to the front of the camera, for _personalisation
 
 Final 3D design!!
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
+<div style="display: flex; gap: 1rem; margin: 2rem 0; align-items: stretch; justify-content: left; flex-wrap: wrap;">
   <img
     width="474"
     height="407"
     alt="image"
     src={finalDesignFront.src}
-    style="width: 100%; height: auto;"
+    style="height: 310px; width: auto; max-width: 100%; border-radius: 4px;"
   />
   <img
     width="420"
     height="407"
     alt="image"
     src={finalDesignBack.src}
-    style="width: 100%; height: auto;"
+    style="height: 310px; width: auto; max-width: 100%; border-radius: 4px;"
   />
 </div>
 
@@ -343,16 +351,16 @@ Worked on the case again! Improved the sliding mechanism, and took tolerance int
 And updated all the text planes, going for 0.2mm minimum extrusions and
 intrusions this time!
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
+<div style="display: flex; gap: 1rem; margin: 2rem 0; align-items: stretch; justify-content: left; flex-wrap: wrap;">
   <img
     alt="Case text plane detail"
     src={caseTextPlaneDetail.src}
-    style="width: 100%; height: auto;"
+    style="height: 290px; width: auto; max-width: 100%; border-radius: 4px;"
   />
   <img
     alt="Case text plane detail 2"
     src={caseTextPlaneDetail2.src}
-    style="width: 100%; height: auto;"
+    style="height: 290px; width: auto; max-width: 100%; border-radius: 4px;"
   />
 </div>
 
@@ -372,16 +380,16 @@ I didn't include the LiPo and the charging module for this — it's directly
 powered through USB for now. Will wire that up next! Here are some pictures I
 took with the camera:
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
+<div style="display: flex; gap: 1rem; margin: 2rem 0; align-items: stretch; justify-content: left; flex-wrap: wrap;">
   <img
     alt="Test photo from the prototype"
     src={prototypeTestPhoto.src}
-    style="width: 100%; height: auto;"
+    style="height: 250px; width: auto; max-width: 100%; border-radius: 4px;"
   />
   <img
     alt="Test photo from the prototype 2"
     src={prototypeTestPhoto2.src}
-    style="width: 100%; height: auto;"
+    style="height: 250px; width: auto; max-width: 100%; border-radius: 4px;"
   />
 </div>
 
@@ -419,7 +427,7 @@ And it worked!
 <img
   alt="Working TP4056"
   src={workingTp4056.src}
-  style="width: 100%; max-width: 500px; height: auto;"
+  style="width: 30%; max-width: 500px; height: auto;"
 />
 
 However, when I moved the components around to test the MT3608 boost converter,
@@ -463,16 +471,16 @@ unsoldering, then resoldering — I'm starting to hate soldering 😭!
 
 Printed the 3D models I had made!
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
+<div style="display: flex; gap: 1rem; margin: 2rem 0; align-items: stretch; justify-content: left; flex-wrap: wrap;">
   <img
     alt="First printed case parts"
     src={firstPrintedCaseParts.src}
-    style="width: 100%; height: auto;"
+    style="height: 188px; width: auto; max-width: 100%; border-radius: 4px;"
   />
   <img
     alt="First printed case parts 2"
     src={firstPrintedCaseParts2.src}
-    style="width: 100%; height: auto;"
+    style="height: 188px; width: auto; max-width: 100%; border-radius: 4px;"
   />
 </div>
 
@@ -535,21 +543,21 @@ stuff down.)
 
 And everything fit perfectly! The shutter button even screwed into place.
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
+<div style="display: flex; gap: 1rem; margin: 2rem 0; align-items: stretch; justify-content: left; flex-wrap: wrap;">
   <img
     alt="Components fitted in the case"
     src={componentsFitted.src}
-    style="width: 100%; height: auto;"
+    style="height: 280px; width: auto; max-width: 100%; border-radius: 4px;"
   />
   <img
     alt="Shutter button screwed in place"
     src={shutterButtonFitted.src}
-    style="width: 100%; height: auto;"
+    style="height: 280px; width: auto; max-width: 100%; border-radius: 4px;"
   />
   <img
     alt="Assembled case view"
     src={assembledCaseView.src}
-    style="width: 100%; height: auto;"
+    style="height: 280px; width: auto; max-width: 100%; border-radius: 4px;"
   />
 </div>
 
@@ -601,20 +609,22 @@ And now I have my completed camera!!
 
 And it works!!! Here are some of the pictures I captured using it!!
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
+<div style="display: flex; gap: 1rem; margin: 2rem 0; align-items: stretch; justify-content: left; flex-wrap: wrap;">
   <img
     alt="Photo taken with PiShot"
     src={pishotPhoto1.src}
-    style="width: 100%; height: auto;"
+    style="height: 210px; width: auto; max-width: 100%; border-radius: 4px;"
   />
   <img
     alt="Photo taken with PiShot 2"
     src={pishotPhoto2.src}
-    style="width: 100%; height: auto;"
+    style="height: 210px; width: auto; max-width: 100%; border-radius: 4px;"
   />
 </div>
 
 **Total time spent: 2.5 hours**
+
+---
 
 And that's it!
 
