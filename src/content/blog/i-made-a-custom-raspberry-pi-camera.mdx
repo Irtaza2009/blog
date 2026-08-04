@@ -6,15 +6,15 @@ heroImage: "../../assets/camera-pishot-half-built.png"
 tags: ["hardware", "raspberry pi", "camera"]
 ---
 
-This is my complete **journey** of making a **custom Raspberry Pi camera**.
+This is my complete journey of making a custom Raspberry Pi camera: **PiShot**.
 
-I made it with a **Raspberry Pi Zero 2 W**, a **Pi camera module**, and a **custom 3D printed case**.
+I made it with a Raspberry Pi Zero 2 W, a Pi camera module, and a custom 3D-printed case.
 
-This project is **opensource**, and you can check it out **[here](https://github.com/Irtaza2009/PiShot)**!
+This project is **open-source**, and you can check it out **[here](https://github.com/Irtaza2009/PiShot)**!
 
 I also made a showcase **[video](https://www.youtube.com/watch?v=gf-RIgXnWJM)** for it!
 
-### **Total Time Spent: ~39 hours!**
+### **Total time spent: ~43.5 hours!**
 
 ---
 
@@ -24,7 +24,7 @@ I also made a showcase **[video](https://www.youtube.com/watch?v=gf-RIgXnWJM)** 
 
 ## July 25th: Research + Wiring Diagram
 
-The plan is to make a Camera with a custom 3d case (with a tripod, grip, and viewfinder), using the Raspberry Pi Zero 2W, and the Pi camera module 3, and the ST7789 LCD, that stores the photos on an SD card, and you can view the last photo (and explore all the shoots) on the display!! It will be in the Cyber-shot form factor!!
+The plan is to make a Camera with a custom 3D case (with a tripod, grip, and viewfinder), using the Raspberry Pi Zero 2W, and the Pi camera module 3, and the ST7789 LCD, that stores the photos on an SD card, and you can view the last photo (and explore all the shoots) on the display!! It will be in the Cyber-shot form factor!!
 
 Started by looking up all the different Pi Camera modules and comparing their results! Settled on the Camera module 3, as it has auto focus! I will be using the Pi Zero 2W as the MCU, as it is the lowest-performance MCU that supports the camera.
 Then I made a list of all the components I would need! I decided to go with a 1500mAh 3.7V LiPo battery with an MT3608 boost converter, and a TP4056 module (with protection) to charge it! (At first, I was considering a power bank or an 18650 cell, but those are too bulky!)
@@ -41,7 +41,7 @@ I decided that I won't be using a PCB, so it's easier to place all the component
 
 **Total time spent: 3.5 hours**
 
-## July 26th: Started 3d Case Design
+## July 26th: Started 3D Case Design
 
 I began by finding and downloading 3D models of all the components I would be using. This process took a significant amount of time, as I had to search extensively to locate every part! After that, I started designing the case in Shapr3D on my iPad. I first created a rectangular base for the body, including a removable back. Next, I added a square hole in the centre for the camera module, and a hole at the top for the shutter button. The challenging part was designing a grip that could slide into the case and be removed easily. Developing the sliding mechanism took quite a while, but I think it turned out pretty cool!
 
@@ -97,7 +97,7 @@ I began by placing each component into the interior of the case, ensuring that t
 
 **Total time spent: 7 hours**
 
-## July 27th: Buttons + USB C port + TP4056 supports
+## July 27th: Buttons + USB C Port + TP4056 Supports
 
 Looked through the datasheet for [these](https://tech.alpsalpine.com/e/products/detail/SKRGAED010/) circle micro pushbuttons and noted their size, then made a cool to-size slot for them in the case!
 
@@ -144,7 +144,7 @@ Then, I also made a slot for the USB-C port, and some supports for the TP4056!
   />
 </div>
 
-**Total Time spent: 2 hours**
+**Total time spent: 2 hours**
 
 ## July 28th: Tripod + Viewfinder
 
@@ -167,7 +167,7 @@ Inspired by the removable Sony viewfinder, I also decided to make one too! It wi
   />
 </div>
 
-Then I thought about adding support for standard tripods! And, of course, I think the sliding mechanism is super cool, so I built another bit of it on the bottom of the case, and then made a cube with a screw hole in it! Thankfully, I discovered Shapr3d's subtract tool, or I don't think I could have ever made the screw curve paths!! And finally rounded off the edges to make it look more polished!
+Then I thought about adding support for standard tripods! And, of course, I think the sliding mechanism is super cool, so I built another bit of it on the bottom of the case, and then made a cube with a screw hole in it! Thankfully, I discovered Shapr3D's subtract tool, or I don't think I could have ever made the screw curve paths!! And finally rounded off the edges to make it look more polished!
 
 <img
   width="306"
@@ -185,7 +185,7 @@ Then I remembered I had forgotten to add space for the SPDT On/Off switch, so I 
   src="https://github.com/user-attachments/assets/4d4c5abe-a00a-485f-bb30-608b4c7e27c6"
 />
 
-**Total Time spent: 3 hours**
+**Total time spent: 3 hours**
 
 ## July 29th: Finished Design
 
@@ -231,7 +231,7 @@ And then I also added some text to the front of the camera, for _personalisation
   src="https://github.com/user-attachments/assets/961ffaab-5933-4ffc-a89a-37eb2c37df23"
 />
 
-Final 3d design!!
+Final 3D design!!
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
   <img
@@ -250,23 +250,23 @@ Final 3d design!!
   />
 </div>
 
-**Total Time spent: 2.5 hours**
+**Total time spent: 2.5 hours**
 
-## July 30th: Made firmware
+## July 30th: Made Firmware
 
 Got to work on coding the firmware for the Pi! I have never before used a Pi Zero 2w, but it was super easy to code for it because, well, it's a full Linux computer! So no flashing or stuff, I just have to make a Python file and add it to run on boot!
 
 Right now, I randomly assigned the GPIO pins in the code because I don't know what pin I might end up using for what. The script ~~should~~ will: display a splash screen, wait for shutter button press, capture image from camera, and save it to SD card with a timestamped filename!
 
-**Total Time spent: 1 hour**
+**Total time spent: 1 hour**
 
 # IRL Building!!
 
-**Time spent on soldering/building: ~20 hours**
+**Time spent on soldering/building: ~24.5 hours**
 
-## August 20th: Finished buidling prototype
+## August 20th: Finished Building Prototype
 
-All of the parts arrived today except for the Pi Zero W camera ribbon cable and the 3d case. So I decided to start and make a breadboard prototype to make sure everything works, and also just to make everything with the camera functionality, so I only need to connect the camera when the cable arrives!
+All of the parts arrived today except for the Pi Zero W camera ribbon cable and the 3D case. So I decided to start and make a breadboard prototype to make sure everything works, and also just to make everything with the camera functionality, so I only need to connect the camera when the cable arrives!
 
 First, I flashed an SD card with Pi OS, with SSH enabled, and put that into the Pi Zero 2W! Then I SSHed into it! And it was really fun! I might even have got lost playing with all the different settings and testing out the different RPi features like RPi connect c:! The interface was interesting! Then I used nano for the first time to code, and it was pretty easy to use after learning the shortcuts (though selection is pretty hard).
 
@@ -285,6 +285,12 @@ Now I just have to wait for the Pi Zero 2 W camera ribbon cable to arrive!!
 
 **Total time spent: 4.5 hours**
 
+---
+
+_The parts took a lot of time to arrive, so I didn't get to work on the project for a while. But now that they have arrived, I can finally continue working on it! So **6 months later...**_
+
+---
+
 ## February 7th: Case Revisions
 
 Worked on the case again! Improved the sliding mechanism, and took tolerance into account this time so it wouldn't be so tight. Also added little holes on each side of the case for a lanyard/keychain!
@@ -294,8 +300,10 @@ Worked on the case again! Improved the sliding mechanism, and took tolerance int
   src="https://cdn.hackclub.com/019c3905-e2a1-72a2-bba4-b4c328a5a2ec/chrome_VqDOkoIx2F.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 And updated all the text planes, going for 0.2mm minimum extrusions and
 intrusions this time!
+
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
   <img
     alt="Case text plane detail"
@@ -308,7 +316,8 @@ intrusions this time!
     style="width: 100%; height: auto;"
   />
 </div>
-**Total Time spent: 2 hours**
+
+**Total time spent: 2 hours**
 
 ## February 9th: First Breadboard Prototype
 
@@ -319,9 +328,11 @@ Got out all the components I would need and made a basic breadboard prototype! R
   src="https://cdn.hackclub.com/019c4291-c526-70d1-a139-deaf8dc09c0c/chrome_OqJD3AARIU.jpg"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 I didn't include the LiPo and the charging module for this — it's directly
 powered through USB for now. Will wire that up next! Here are some pictures I
 took with the camera:
+
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
   <img
     alt="Test photo from the prototype"
@@ -334,9 +345,10 @@ took with the camera:
     style="width: 100%; height: auto;"
   />
 </div>
+
 Now I am going to solder it all together, and wire the power components next!
 
-**Total Time spent: 4 hours**
+**Total time spent: 4 hours**
 
 ## February 9th (later): Charging Module Won't Cooperate
 
@@ -347,10 +359,11 @@ Soldered the LiPo to the TP4056, and that to the boost converter (MT3608), but i
   src="https://cdn.hackclub.com/019c439f-4aba-75cd-afaa-8d8074ce4e54/image.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 Ordered new ones and will wait for them to arrive. That's it for today, will
 assemble the camera without the power bit tomorrow, or work on the case instead!
 
-**Total Time spent: 2.5 hours**
+**Total time spent: 2.5 hours**
 
 ## February 12th: Rebuilding the Power Circuit
 
@@ -361,42 +374,51 @@ Finally got the new TP4056 and MT3608 modules delivered today! Removed all the s
   src="https://cdn.hackclub.com/019c52c2-f469-7adb-8a4f-eb20fef3aea0/image.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 And it worked!
+
 <img
   alt="Working TP4056"
   src="https://cdn.hackclub.com/019c52c4-01a7-7b76-b270-d5acda35f5f9/image.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 However, when I moved the components around to test the MT3608 boost converter,
 all of the wires came apart. So I started from scratch again, this time using
 some longer wires (cut up from some jumper wires I had).
+
 <img
   alt="Rewired with longer jumper wires"
   src="https://cdn.hackclub.com/019c52c6-4542-73ff-81b3-f08b273edaaf/image.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 This time, the solder held! So I brought out my multimeter to set the boost
 converter to the right voltage (5.1V for the Pi). But it refused to go above 4V,
 no matter how much I rotated the potentiometer.
+
 <img
   alt="Multimeter reading below 4V"
   src="https://cdn.hackclub.com/019c52c8-4146-7ad3-9b88-9f839501d4e5/image.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 So I decided to replace the MT3608 with a new one, testing it before soldering
 this time, and it showed a greater voltage. Completed wiring it all together,
 and successfully set it to 5.1V!!
+
 <img
   alt="Boost converter set to 5.1V"
   src="https://cdn.hackclub.com/019c52ca-0fe1-7d8a-85fa-59ed6c9d2bce/image.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 Also added a switch between the TP4056 and MT3608, which will act as the main
 power switch for the camera!! Next, I'm going to wire this module to the Pi Zero
 2W, and hopefully it will work!! Most of my time today was spent soldering, then
 unsoldering, then resoldering — I'm starting to hate soldering 😭!
 
-**Total Time spent: 4 hours**
+**Total time spent: 4 hours**
 
 ## February 16th: Revising the Case After the First Print
 
@@ -414,6 +436,7 @@ Printed the 3D models I had made!
     style="width: 100%; height: auto;"
   />
 </div>
+
 The sliding mechanisms for the viewfinder and grip worked, but were a bit tight,
 so I decided to sand them. Tried fitting all the components inside, but sadly
 the LiPo is a bit big, and the Pi Zero 2W and camera module don't fit perfectly
@@ -428,24 +451,29 @@ space for wires and stuff.
   src="https://cdn.hackclub.com/019c65df-3db6-78ae-a9d6-6d48a1e321ff/image.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 Then I reduced the size of the sliding mechanism to make it work without
 sanding, since I was printing another revision anyway.
+
 <img
   alt="Revised sliding mechanism"
   src="https://cdn.hackclub.com/019c65de-ef7b-7e2a-a76e-f13c6c686882/image.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 I also increased the size of the keychain holes, because they were too small.
+
 <img
   alt="Larger keychain holes"
   src="https://cdn.hackclub.com/019c65df-fdc7-7861-a511-4dbdd5c57f8f/image.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 Made sure only the main body was affected by these changes, and not any of the
 attachable stuff, so I won't have to reprint that. Now time to wait for the new
 print!!
 
-**Total Time spent: 2.5 hours**
+**Total time spent: 2.5 hours**
 
 ## February 20th: Everything Fits in the New Case
 
@@ -456,14 +484,18 @@ Printed the new case!! Also, the bits I had soldered seemed to be coming off, so
   src="https://cdn.hackclub.com/019c7ac6-7de7-772d-84c8-8f58bf302865/image.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 Then I started placing everything in the new case! (And used some tape to hold
 stuff down.)
+
 <img
   alt="Placing components in the new case"
   src="https://cdn.hackclub.com/019c7ac9-f9c2-78b8-9516-3ee1e489e109/image.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 And everything fit perfectly! The shutter button even screwed into place.
+
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
   <img
     alt="Components fitted in the case"
@@ -481,14 +513,17 @@ And everything fit perfectly! The shutter button even screwed into place.
     style="width: 100%; height: auto;"
   />
 </div>
+
 Now I'm flashing an SD card with Pi OS for the Pi Zero 2W, since I lost the
 previous card, and then I'll test out the camera!!
+
 <img
   alt="Flashing a new SD card"
   src="https://cdn.hackclub.com/019c7a9f-da6f-7e34-aefe-d571e5c39a9f/image.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
-**Total Time spent: 2.5 hours**
+
+**Total time spent: 2.5 hours**
 
 ## February 20th (later): It's Alive!
 
@@ -499,26 +534,34 @@ Flashed the SD card with Pi OS!
   src="https://cdn.hackclub.com/019c7c40-4b12-7f65-9b26-7e40f346a59a/rpi-imager_jX1MWojzgr.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 Then I added the script, and after a bit of debugging, swapping and installing
 different libraries, the script worked!
+
 <img
   alt="Terminal showing the working script"
   src="https://cdn.hackclub.com/019c7c40-d9bf-7d98-8838-bcd222d46ae8/WindowsTerminal_EVVYuoDKhw.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 However, the shutter button was a bit buggy, so I also wired a small button too!
+
 <img
   alt="Extra wired shutter button"
   src="https://cdn.hackclub.com/019c7c42-660c-7573-ba72-dc2acf56ade8/image.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 And now I have my completed camera!!
+
 <img
   alt="Completed PiShot camera"
   src="https://cdn.hackclub.com/019c7c43-5105-71d3-81d5-573c0b02569e/image.png"
   style="width: 100%; max-width: 500px; height: auto;"
 />
+
 And it works!!! Here are some of the pictures I captured using it!!
+
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2rem 0; align-items: start;">
   <img
     alt="Photo taken with PiShot"
@@ -531,4 +574,17 @@ And it works!!! Here are some of the pictures I captured using it!!
     style="width: 100%; height: auto;"
   />
 </div>
-**Total Time spent: 2.5 hours**
+
+**Total time spent: 2.5 hours**
+
+And that's it!
+
+My completed custom Raspberry Pi camera, PiShot!
+
+It was a fun journey, and I learned a lot about 3D design, soldering, and coding for the Raspberry Pi.
+
+And btw, this project is open-source, so you can check out the source code or 3D files **[here](https://github.com/Irtaza2009/PiShot)**!
+
+I also made a short showcase **[video](https://www.youtube.com/watch?v=gf-RIgXnWJM)** for the camera!
+
+I hope you enjoyed reading about my process as much as I enjoyed making it! _(was kind of a long read, sorry!!)_
