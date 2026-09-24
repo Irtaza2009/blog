@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
@@ -8,7 +8,22 @@ import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'; 
 // Get all blog posts and sort by date
 const posts = await getCollection('blog');
-const sortedPosts = posts.sort(
+
+const postsWithReadingTime = await Promise.all(
+  posts.map(async (post) => {
+    const { remarkPluginFrontmatter } = await render(post);
+
+    return {
+      ...post,
+      data: {
+        ...post.data,
+        minutesRead: remarkPluginFrontmatter.minutesRead,
+      },
+    };
+  })
+);
+
+const sortedPosts = postsWithReadingTime.sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
@@ -23,6 +38,7 @@ const sortedPosts = posts.sort(
 
     <section class="blog-section">
       <h2 class="section-title">Blog</h2>
+      
     </section>
 
     <main class="blog-homepage">
@@ -53,6 +69,9 @@ const sortedPosts = posts.sort(
                   <div class="post-meta">
                     <span class="post-date">
                       <FormattedDate date={post.data.pubDate} />
+                    </span>
+                    <span class="reading-time">
+                      {post.data.minutesRead ? `${post.data.minutesRead}` : ''}
                     </span>
                     {post.data.tags && (
                       <div class="post-tags">
@@ -219,6 +238,7 @@ const sortedPosts = posts.sort(
     display: flex;
     gap: 0.4rem;
     flex-wrap: wrap;
+    margin-left: auto;
   }
 
   .tag {
@@ -237,6 +257,14 @@ const sortedPosts = posts.sort(
 
   .empty-state h2 {
     margin-bottom: 1rem;
+  }
+
+  .reading-time {
+    font-size: 0.75rem;
+    font-weight: 700;
+    opacity: 0.9;
+    color: var(--link-color);
+    white-space: nowrap;
   }
 
   @media (max-width: 768px) {
@@ -278,9 +306,10 @@ const sortedPosts = posts.sort(
     }
 
     .post-meta {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.3rem;
+      display: flex
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.75rem;
     }
 
     .post-date {
