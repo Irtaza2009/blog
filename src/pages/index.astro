@@ -247,6 +247,13 @@ const sortedPosts = postsWithReadingTime.sort(
     border-radius: 0.75rem;
     font-size: 0.75rem;
     color: var(--text-color);
+    transition: all 0.3s ease;
+  }
+
+  .tag:hover {
+    background: var(--link-color);
+    color: var(--bg-color);
+    transform: translateY(-1px);
   }
 
   .empty-state {
